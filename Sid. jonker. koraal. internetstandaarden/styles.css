@@ -1,0 +1,195 @@
+/* kopjes verbergen */
+/* bron: https://www.a11yproject.com/posts/how-to-hide-content/  */
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+html, body {
+  height: 100%;
+}
+
+/* css homepagina */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #fff;
+    color: #000;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    padding: 1rem; 
+    /* rem zodat de marges en en afstanden meeschalen met de lettergrootte */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+p {
+  font-family: 'Verdana', Arial, sans-serif;
+  font-size: 1.1rem;   
+  line-height: 1.7;    
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 95px; 
+    height: auto; 
+    margin-right: 1rem; 
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a.active {
+    color: red;
+    font-weight: bold;
+}
+main {
+  padding: 2rem;
+  flex: 1;
+}
+
+
+/* op de homepage intro en aside naast elkaar */
+.home-layout {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;             
+  max-width: 1200px;      
+  margin: 0 auto;       
+}
+
+h2 {
+    font-family: 'Courier New', Courier, monospace; 
+}
+/* intro pakt nu 2/3 van de pagina */
+.intro {
+    flex: 2;
+}
+/* tekst wat ademruimte geven */
+.intro p {
+    margin-bottom: 1.5rem;
+}
+
+.intro h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+/* links pakt nu 1/3 van de pagina */
+.links {
+    flex: 1;
+}
+
+.links p {
+    margin: 1rem 0;
+}
+.video iframe {
+    width: 750px;
+    height: 500px;
+    border: 1rem solid black;
+    border-radius: 25px;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2.2rem;
+
+}
+p a {
+  font-family: inherit;        
+  font-weight: 600;            
+  color: #b30000;             
+  text-decoration: underline;
+}
+
+p a:hover {
+  color: #000;
+}
+
+
+/* css pagina 2 */
+
+article {
+    box-sizing: border-box; 
+}
+
+article:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+article img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+article h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.25rem;
+}
+/* lijstje met afleveringen */
+.afleveringen-lijst {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.afleveringen-lijst > li {
+  flex: 1 1 calc(33.333% - 2.2rem);
+}
+
+/* pagina 3 de hosts */
+.hosts-grid {
+    display: flex;
+    gap: 2rem;
+}
+
+.host {
+    flex: 1;
+    text-align: center;
+}
+
+.host img {
+    width: 100%;
+    max-width: 250px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
